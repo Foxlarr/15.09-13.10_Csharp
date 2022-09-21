@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Type number of day (1 to 7)");
-string a = (Console.ReadLine());
+string a = Console.ReadLine();
 string[] weekDays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 switch (a)
 {
@@ -26,6 +26,7 @@ switch (a)
         break;
     default:
     Console.WriteLine("There are only 7 days, you dumb coconut. They also can't be negative. Try again. And don't you dare type anything other than numbers. ");
+    break;
 }
 
 
