@@ -1,10 +1,10 @@
 ﻿Console.Write("Input number ");
-int num = Convert.ToInt32(Console.ReadLine());
+double num = Convert.ToDouble(Console.ReadLine());
 Console.Write("Input power ");
 double pow = Convert.ToDouble(Console.ReadLine());
-int res = 1;
+double res = 1;
  
-int RaiseToPower (int Rnum, double Rpow, int Rres)
+double RaiseToPower (double Rnum, double Rpow, double Rres)
 {
         if (pow < 0) Rpow = -Rpow;
         for (int i = 0; i < Rpow; i++)
