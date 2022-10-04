@@ -25,7 +25,7 @@ void PrintArray(double[] array)
 
 double DiffBetweenMinMax(double[] array)
 {
-    double sum = default;
+    double diff = default;
     double max = double.NegativeInfinity;
     double min = double.PositiveInfinity;
     for (int i = 0; i < array.Length; i++) 
@@ -36,14 +36,14 @@ double DiffBetweenMinMax(double[] array)
         if (array[i] < min)
             min = array[i];
     }
-    sum = min + max;
-    return sum;
+    diff = max - min;
+    return diff;
 }
 
 
 
 double[] array = CreateArrayRndDouble(3, 1, 10);
 PrintArray(array);
-double sum = DiffBetweenMinMax(array);
-System.Console.WriteLine($" -> {sum}");
+double diff = DiffBetweenMinMax(array);
+System.Console.WriteLine($" -> {diff}");
 
