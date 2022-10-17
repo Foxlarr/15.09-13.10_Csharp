@@ -22,7 +22,7 @@ double[,,] CreateArray3D(int rows, int columns, int what, int min, int max)
     return matrix;
 }
 
-bool FindElement(int[,,] array, int el)
+bool FindElement(double[,,] array, int el)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -37,7 +37,7 @@ bool FindElement(int[,,] array, int el)
     return false;
 }
 
-void PrintArray(int[,,] array)
+void PrintArray(double[,,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -55,21 +55,6 @@ void PrintArray(int[,,] array)
 }
 
 
-void PrintMatrix(double[,] matrix)
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        Console.Write("|");
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4} | ");
-            else Console.Write($"{matrix[i, j],4} ");
-        }
-        Console.WriteLine("|");
-    }
-}
-
-
 
 System.Console.WriteLine("Type rows");
 int row = Convert.ToInt32(Console.ReadLine());
@@ -81,5 +66,4 @@ System.Console.WriteLine();
 
 
 double[,,] array3D = CreateArray3D(row, column, z, -10, 10);
-//PrintMatrix(array2D);
 PrintArray(array3D);
